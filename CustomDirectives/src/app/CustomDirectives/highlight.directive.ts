@@ -1,0 +1,16 @@
+import { Directive,Renderer2,ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+
+  constructor(private element:ElementRef,private renderer:Renderer2) {
+
+   }
+   ngOnInit(){
+    this.renderer.setStyle(this.element.nativeElement,'backgroundColor','#F1948A');
+    this.renderer.addClass(this.element.nativeElement,'container');
+    this.renderer.setAttribute(this.element.nativeElement,'title','This is example');
+   }
+}
