@@ -2,13 +2,17 @@
   <h2>This is an example of custom directive in Angular</h2>
 </div>
 
-<h2 setBackground appHover>This is an example of Renderer2 directive in Angular</h2>
+<h2 class="container" setBackground appHover>This is an example of Renderer2 directive in Angular</h2>
 
 <!--hostlistener and renderer2-->
-<div appHighlight appHover>
+<div class="container" appHighlight appHover>
   <h2>This is an example of @HostListener directive in Angular</h2>
 </div>
 
 <div class="container" appBetterHighlight>
   <h2>This is an example of @HostBinding directive in Angular</h2>
+</div>
+
+<div class="container" appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">
+  <h2>This is an example of Custom directive Binding in Angular</h2>
 </div>
