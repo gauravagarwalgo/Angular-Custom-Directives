@@ -1,9 +1,14 @@
 <div class="container" setBackground>
-  <p>This is a demo to explain custom directives</p>
+  <h2>This is an example of custom directive in Angular</h2>
 </div>
 
-<h1 setBackground>This is a heading element</h1>
+<h2 setBackground appHover>This is an example of Renderer2 directive in Angular</h2>
 
-<div appHighlight>
-  <h2>This is coming from Renderer2</h2>
+<!--hostlistener and renderer2-->
+<div appHighlight appHover>
+  <h2>This is an example of @HostListener directive in Angular</h2>
+</div>
+
+<div class="container" appBetterHighlight>
+  <h2>This is an example of @HostBinding directive in Angular</h2>
 </div>

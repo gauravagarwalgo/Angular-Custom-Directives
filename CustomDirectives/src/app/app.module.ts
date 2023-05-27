@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SetBackgroundDirective } from './CustomDirectives/setbackground.directive';
 import { HighlightDirective } from './CustomDirectives/highlight.directive';
+import { HoverDirective } from './CustomDirectives/hover.directive';
+import { BetterHighlightDirective } from './CustomDirectives/better-highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SetBackgroundDirective,
-    HighlightDirective
+    HighlightDirective,
+    HoverDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule
