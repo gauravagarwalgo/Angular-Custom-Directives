@@ -49,3 +49,11 @@
 <ng-template #myVar>
   <p>This is an example paragraph</p>
  </ng-template>
+
+
+<!--Custom structural Directives-->
+<button class="btn btn-notice" (click)="displayNotice()">Show Notice</button>
+<div class="info-container notice" *appIf="display">
+  <h3>This is an important notice</h3>
+  <p>This is a notice issues for all website users</p>
+</div>
