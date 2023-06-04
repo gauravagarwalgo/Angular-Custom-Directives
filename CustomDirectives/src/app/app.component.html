@@ -16,3 +16,11 @@
 <div class="container" appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">
   <h2>This is an example of Custom directive Binding in Angular</h2>
 </div>
+
+<div appClass [display]="{container:true, 'change-font':true}">
+  <h2>This is an example of appClass directive in Angular</h2>
+</div>
+
+<!-- If in the above, we do want to use display and directly want to use appClass then we can give alias name to input and give same method name
+@Input('appClass') set appClass() and in html, just write <div [appClass]="{container:true,.....}"-->
+
