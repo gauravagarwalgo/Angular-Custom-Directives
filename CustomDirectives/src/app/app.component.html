@@ -57,3 +57,12 @@
   <h3>This is an important notice</h3>
   <p>This is a notice issues for all website users</p>
 </div>
+
+
+<!--ngSwitch directive-->
+<div class="container" [ngSwitch]="occupation"> <!-- structural but no asterik because it is not going to manipulate the DOM-->
+  <p *ngSwitchCase="'teacher'">This paragraph will be displayed if occupation is teacher</p> <!-- asterik here because it is going to manipulate the DOM. -->
+  <p *ngSwitchCase="'designer'">This paragraph will be displayed if occupation is designer</p>
+  <p *ngSwitchCase="'lawyer'">This paragraph will be displayed if occupation is lawyer</p>
+  <p *ngSwitchDefault>This paragraph is default and will be displayed if no case matches switch expression</p>
+</div>

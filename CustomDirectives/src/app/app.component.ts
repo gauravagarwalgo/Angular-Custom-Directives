@@ -9,8 +9,9 @@ export class AppComponent {
   title = 'CustomDirectives';
 
   display:Boolean=false
+  occupation:string="designer";
 
   displayNotice(){
-    this.display=true;
+    this.display=true; 
   }
 }
