@@ -18,9 +18,34 @@
 </div>
 
 <div appClass [display]="{container:true, 'change-font':true}">
-  <h2>This is an example of appClass directive in Angular</h2>
+  <h2>This is an example of custom ngClass directive in Angular</h2>
 </div>
 
 <!-- If in the above, we do want to use display and directly want to use appClass then we can give alias name to input and give same method name
 @Input('appClass') set appClass() and in html, just write <div [appClass]="{container:true,.....}"-->
 
+<div class="container" [appStyle]="{backgroundColor:'pink',color:'white'}">
+  <h2>This is an example of custom ngStyle directive in Angular</h2>
+</div>
+
+
+<!--how structural directive works-->
+<button class="btn btn-notice" (click)="displayNotice()">Show Notice</button>
+<!-- <div class="info-container notice" *ngIf="display;else myVar">
+  <h3>This is an important notice</h3>
+  <p>This is a notice issues for all website users</p>
+</div>
+<ng-template #myVar>
+ <p>This is an example paragraph</p>
+</ng-template> -->
+
+<!--Internally angular uses below template-->
+<ng-template [ngIf]="display" [ngIfElse]="myVar">
+  <div class="info-container notice" >
+    <h3>This is an important notice</h3>
+    <p>This is a notice issues for all website users</p>
+  </div>
+</ng-template>
+<ng-template #myVar>
+  <p>This is an example paragraph</p>
+ </ng-template>
